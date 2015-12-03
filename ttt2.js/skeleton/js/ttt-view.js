@@ -22,8 +22,13 @@ $.extend(View.prototype, {
       alert(error.msg);
     }
 
-    // if (this.game.isWon)
-
+    if (this.game.isOver()){
+      if (this.game.winner()){
+        alert("You Win!");
+      } else {
+        alert("It's a tie.");
+      }
+    }
   },
 
   setupBoard: function() {
